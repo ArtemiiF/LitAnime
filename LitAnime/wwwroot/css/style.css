@@ -1,0 +1,159 @@
+﻿@font-face {
+    font-family: "MainFontBold"; /* Гарнитура шрифта */
+    src: url(../fonts/OpenSansCondensed-Bold.ttf) /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: "MainFont"; /* Гарнитура шрифта */
+    src: url(../fonts/OpenSansCondensed-Light.ttf); /* Путь к файлу со шрифтом */
+}
+
+
+
+.background {
+    /* Home */
+    margin: 0px;
+    position: absolute;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(107.56deg, rgba(241, 145, 242, 0.5) 0%, rgba(102, 228, 242, 0) 100%);
+}
+
+body{
+    margin: 0px;
+}
+
+
+
+.menu {     
+    margin-top: 0; /* Отступ сверху */
+    margin-bottom: 0; /* Отступ снизу */
+    height: 50px;
+    background: rgba(75, 242, 226, 0.3);
+}
+
+    .menu li {
+        display: inline;
+    }
+
+    .menu nav {
+        display: inline;
+    }
+
+.rmenu div {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.lmenu div {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+}
+
+.cmenu div {
+    position: absolute;
+    left: 45%;
+    top: 10px;
+}
+
+.cmenu a {
+    font-family: "MainFontBold";
+    text-decoration: none;
+    font-size: 36px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.rmenu a {
+    font-family: "MainFont";
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+/* Дублируются хз как фиксить*/
+.lmenu a {
+    font-family: "MainFont";
+    text-decoration: none;
+    padding: 5px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: left;
+    color: #000000;
+}
+
+.lmenu li {
+    display: inline;
+}
+
+.indexlogo {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+
+    .indexlogo b {
+        padding-left: 100px;
+        font-family: "MainFontBold";
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 72px;
+        line-height: 98px;
+        color: #000000;
+    }
+
+    .indexlogo input {
+        position: static;
+        width: 450px;
+        height: 55px;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 74px;
+        padding-left: 25px;
+        font-family: "MainFont";
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 55px;
+        color: #000000;
+        color: #000000;
+    }
+
+.raitinglogo {
+    padding-top: 30px;
+    padding-left: 40px
+}
+
+    .raitinglogo input {
+        position: static;
+        width: 450px;
+        height: 55px;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 74px;
+        padding-left: 25px;
+        font-family: "MainFont";
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 55px;
+        color: #000000;
+        color: #000000;
+    }
+
+.upload_pic{
+
+}

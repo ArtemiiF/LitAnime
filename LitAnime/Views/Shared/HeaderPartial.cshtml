@@ -1,0 +1,27 @@
+﻿<nav class="lmenu">
+    <div>
+        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        <a asp-area="" asp-controller="Rating" asp-action="Index">Rating</a>
+        @{
+            if (User.IsInRole("admin"))
+            {
+                <a asp-area="admin" asp-controller="UploadPicture" asp-action="Index">Upload</a>
+            }
+        }
+    </div>
+</nav>
+<nav class="rmenu">
+    <div>
+        @{
+            if(User.Identity.IsAuthenticated)
+            {
+                <a asp-area="" asp-controller="Account" asp-action = "Logout">Loggined as @User.Identity.Name </a>
+            }
+            else
+            {
+                <a asp-area="" asp-controller="Account" asp-action="Login">Loggin</a>
+            }
+        }
+        
+    </div>
+</nav>

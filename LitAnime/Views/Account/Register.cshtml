@@ -1,0 +1,33 @@
+﻿@model RegisterViewModel
+
+<div>
+    <h1>Register</h1>
+    <div>
+        @{
+            if (ViewBag.returnUrl == null)
+                ViewBag.returnUrl = "/Home/Index";
+        }
+        <form asp-area="" asp-controller="Account" asp-action="Register" method="post" asp-route-returnUrl="@ViewBag.returnUrl">
+            <div asp-validation-summary="All"></div>
+            <div>
+                <label asp-for="Email"></label>
+                <input asp-for="Email"/>
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div>
+                <label asp-for="UserName"></label>
+                <input asp-for="UserName"/>
+                <span asp-validation-for="UserName"></span>
+            </div>
+            <div>
+                <label asp-for="Password"></label>
+                <input asp-for="Password"/>
+                <span asp-validation-for="Password"></span>
+            </div>
+            <div>
+                <input type="submit" value="Register"/>
+            </div>
+        </form>
+    </div>
+</div>
+
