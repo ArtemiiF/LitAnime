@@ -8,7 +8,31 @@
     src: url(../fonts/OpenSansCondensed-Light.ttf); /* Путь к файлу со шрифтом */
 }
 
+::-webkit-input-placeholder {
+    color: #8d8d8d;
+}
 
+:-moz-placeholder {
+    color: #8d8d8d;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: #8d8d8d;
+    opacity: 1;
+}
+
+::-ms-input-placeholder {
+    color: #8d8d8d;
+}
+
+::-ms-input-placeholder {
+    color: #8d8d8d;
+}
+
+::placeholder {
+    color: #8d8d8d;
+}
 
 .background {
     /* Home */
@@ -20,15 +44,14 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(107.56deg, rgba(241, 145, 242, 0.5) 0%, rgba(102, 228, 242, 0) 100%);
+    min-width: 320px;
 }
 
-body{
+body {
     margin: 0px;
 }
 
-
-
-.menu {     
+.menu {
     margin-top: 0; /* Отступ сверху */
     margin-bottom: 0; /* Отступ снизу */
     height: 50px;
@@ -96,8 +119,11 @@ body{
 
 .indexlogo {
     position: absolute;
-    top: 35%;
-    left: 35%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
     .indexlogo b {
@@ -132,7 +158,7 @@ body{
 
 .raitinglogo {
     padding-top: 30px;
-    padding-left: 40px
+    padding-left: 40px;
 }
 
     .raitinglogo input {
@@ -154,6 +180,68 @@ body{
         color: #000000;
     }
 
-.upload_pic{
-
+.block {
+    margin: 25px 0 25px 0;
+    padding: 0 10px;
 }
+
+.login_form {
+    padding: 50px 35px 50px 50px;
+    background: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(75, 242, 226, 0.3);
+    min-width: 300px;
+    box-shadow: -18px 0 20px -20px #333, 18px 0 20px -20px #333;
+}
+
+.block {
+    margin: 25px 0 25px 0;
+    padding: 0 0;
+}
+
+.jsection {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+    .jsection input {
+        display: block;
+        min-width: 150px;
+        padding: 10px 10px;
+        margin: 0 15px 0px 0px;
+        background-color: #f8f8f8;
+        border: 0px;
+        color: #000;
+    }
+    .jsection span{
+        
+    }
+
+.input.btn {
+    display: block;
+    padding: 10px 20px;
+    margin: 0 10px 0px 0px;
+    background-color: #f8f8f8;
+    border: 0px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+ul.hr {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+    ul.hr li {
+        display: inline-block; 
+        padding: 0px; 
+    }

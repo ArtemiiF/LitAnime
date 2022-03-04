@@ -1,6 +1,6 @@
 ﻿@model RegisterViewModel
 
-<div>
+<div class="login_form">
     <h1>Register</h1>
     <div>
         @{
@@ -8,24 +8,29 @@
                 ViewBag.returnUrl = "/Home/Index";
         }
         <form asp-area="" asp-controller="Account" asp-action="Register" method="post" asp-route-returnUrl="@ViewBag.returnUrl">
-            <div asp-validation-summary="All"></div>
-            <div>
-                <label asp-for="Email"></label>
-                <input asp-for="Email"/>
-                <span asp-validation-for="Email"></span>
+            <div class="block">
+                <label asp-for="@Model.Email"></label>
+                <div class="jsection">
+                    <input asp-for="@Model.Email" />
+                    <span asp-validation-for="@Model.Email"></span>
+                </div>
+            </div>
+            <div class="block">
+                <label asp-for="@Model.UserName"></label>
+                <div class="jsection">
+                    <input asp-for="@Model.UserName" />
+                    <span asp-validation-for="@Model.UserName"></span>
+                </div>
+            </div>
+            <div class="block">
+                <label asp-for="@Model.Password"></label>
+                <div class="jsection">
+                    <input asp-for="@Model.Password" />
+                    <span asp-validation-for="@Model.Password"></span>
+                </div>
             </div>
             <div>
-                <label asp-for="UserName"></label>
-                <input asp-for="UserName"/>
-                <span asp-validation-for="UserName"></span>
-            </div>
-            <div>
-                <label asp-for="Password"></label>
-                <input asp-for="Password"/>
-                <span asp-validation-for="Password"></span>
-            </div>
-            <div>
-                <input type="submit" value="Register"/>
+                <input class="input btn" type="submit" value="Register" />
             </div>
         </form>
     </div>
