@@ -1,16 +1,24 @@
 ﻿@model SearchViewModel
 
-<div>
+<div class="search_page">
 
-    @if (Model.Pictures != null)
+    @if (Model.Pictures.Count()!=0)
     {
-        <h1>@Model.q</h1>
-        <div>
+        <h1>Results for @Model.q</h1>
+        <div class="search_page_pictures_section">
             <ul>
                 @foreach (var item in Model.Pictures)
                 {
                     <li>
-                        <img class="uploading_image" src="@item.Link" />
+                        <div class="search_page_pictures_section_picsection">
+                            <div class="search_page_pictures_section_picsection_picinfo">
+                                <b><label>@item.Name</label></b>
+                                <label class="minus">-@item.Minus</label>
+                                <label class="plus">+@item.Plus</label>
+                            </div>
+                            <img class="uploading_image" src="@item.Link" />
+                        </div>
+                        
                     </li>
                 }
             </ul>

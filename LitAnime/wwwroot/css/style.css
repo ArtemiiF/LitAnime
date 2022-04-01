@@ -45,6 +45,7 @@
     height: 100%;
     background: linear-gradient(107.56deg, rgba(241, 145, 242, 0.5) 0%, rgba(102, 228, 242, 0) 100%);
     min-width: 320px;
+    font-family: MainFont;
 }
 
 body {
@@ -209,7 +210,6 @@ body {
 .jsection {
     display: flex;
     flex-direction: row;
-    
 }
 
     .jsection input {
@@ -221,8 +221,8 @@ body {
         border: 0px;
         color: #000;
     }
-    .jsection span{
-        
+
+    .jsection span {
     }
 
 .input.btn {
@@ -231,7 +231,6 @@ body {
     margin: 0 10px 0px 0px;
     background-color: #f8f8f8;
     border: 0px;
-
     font-weight: bold;
     cursor: pointer;
 }
@@ -244,8 +243,8 @@ ul.hr {
 }
 
     ul.hr li {
-        display: inline-block; 
-        padding: 0px; 
+        display: inline-block;
+        padding: 0px;
     }
 
 .upload_pic {
@@ -262,12 +261,12 @@ ul.hr {
     box-shadow: -18px 0 20px -20px #333, 18px 0 20px -20px #333;
 }
 
-.uploading_image{
-    width:180px;
-    height:180px;
+.uploading_image {
+    width: 180px;
+    height: 180px;
 }
 
-.skeleton{
+.skeleton {
     animation: skeleton-loading 1s linear infinite alternate;
 }
 
@@ -279,4 +278,55 @@ ul.hr {
     100% {
         background-color: hsl(200,20%,85%);
     }
+}
+
+.search_page {
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+
+    .search_page h1 {
+        position: relative;
+        text-align: center;
+    }
+
+.search_page_pictures_section {
+    padding:0,10px,0,0;
+}
+
+.search_page_pictures_section_picsection {
+    height: 180px;
+    width: 220px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+}
+
+.search_page_pictures_section_picsection_picinfo {
+    font-weight: 400;
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    background:lightgray;
+    width:40px;
+}
+
+.search_page_pictures_section ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+    .search_page_pictures_section ul li {
+        margin: 10px;
+    }
+
+.plus{
+    color:forestgreen;
+}
+
+.minus{
+    color:red;
 }
