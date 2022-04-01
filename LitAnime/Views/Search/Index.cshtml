@@ -1,0 +1,23 @@
+﻿@model SearchViewModel
+
+<div>
+
+    @if (Model.Pictures != null)
+    {
+        <h1>@Model.q</h1>
+        <div>
+            <ul>
+                @foreach (var item in Model.Pictures)
+                {
+                    <li>
+                        <img class="uploading_image" src="@item.Link" />
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+    else
+    {
+        <h1>No result found :-(</h1>
+    }
+</div>

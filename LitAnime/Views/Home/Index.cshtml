@@ -1,12 +1,16 @@
-﻿@page
-@model LitAnime.Views.Home.IndexModel
+﻿@model HomeViewModel
+
 @{
-    ViewBag.Title = "Home";
+    ViewBag.Title = "Search";
 }
 
 <div class="indexlogo">
     <div href="index.html">
         <b>LitAnime</b>
     </div>
-    <input type="text" placeholder="Search" />
+
+    <form asp-area="" asp-controller="Home" asp-action="Index">
+      <input asp-for=@Model.SearchString/>
+    </form>
+    
 </div>

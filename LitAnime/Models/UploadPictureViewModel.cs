@@ -14,7 +14,7 @@ namespace LitAnime.Models
         public string PicName { get; set; }
 
         [Required]
-        [Display(Name = "Tags")]
+        [Display(Name = "Tags"+"(nya, kawaii, desu)")]
         public string Tags { get; set; }
     }
 }

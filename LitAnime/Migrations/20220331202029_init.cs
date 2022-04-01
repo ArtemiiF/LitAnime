@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace LitAnime.Migrations
 {
-    public partial class initial : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -196,15 +196,15 @@ namespace LitAnime.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "1", "1bc18948-9b54-4653-b744-e78b3439a67f", "admin", "ADMIN" },
-                    { "2", "b8ff87f2-5dd7-49b5-952c-beb0ce98a01a", "moderator", "MODERATOR" },
-                    { "3", "73c3e994-8de6-4673-bb91-e503baa75ab2", "user", "USER" }
+                    { "1", "4a435226-4518-4491-b203-0ef90f48a8df", "admin", "ADMIN" },
+                    { "2", "b60fe4a7-32ee-4ce0-815f-cb0f2f824454", "moderator", "MODERATOR" },
+                    { "3", "c4368e33-559e-48f2-9e26-e56085d08124", "user", "USER" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "Acc_type", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "Minus", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Plus", "Reg_date", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "1", null, 0, "7821c715-1554-472e-b3e6-7c3d3fbce7d6", "my@email.com", true, false, null, 1, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEKuKEZw40kFJFe68DXtEpliXPBUU2XUamYL0zaF6DbAsJ5MmgrIHpR60rWnYZUzCTw==", null, false, 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "", false, "admin" });
+                values: new object[] { "1", null, 0, "bba9805d-ebfd-457c-8f8b-3d26992ce84a", "my@email.com", true, false, null, 1, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEBFM0UDFa1aKx2+mm1hQuEG8JKdD6MuFdwuoShzc6T34rg0/uCVzQpl/yp9+jIuZQw==", null, false, 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",

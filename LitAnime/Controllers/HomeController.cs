@@ -1,12 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using LitAnime.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LitAnime.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+
+        [AllowAnonymous]
+        public async Task<IActionResult> Index(HomeViewModel model)
         {
-            return View();
+            if (model.SearchString is null || model.SearchString == "")
+            {
+                return View(model);
+            }
+
+            return RedirectToAction("Index", "Search", new SearchViewModel() { q = model.SearchString });
         }
     }
 }

@@ -153,14 +153,14 @@ namespace LitAnime.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7821c715-1554-472e-b3e6-7c3d3fbce7d6",
+                            ConcurrencyStamp = "bba9805d-ebfd-457c-8f8b-3d26992ce84a",
                             Email = "my@email.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Minus = 1,
                             NormalizedEmail = "MY@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKuKEZw40kFJFe68DXtEpliXPBUU2XUamYL0zaF6DbAsJ5MmgrIHpR60rWnYZUzCTw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBFM0UDFa1aKx2+mm1hQuEG8JKdD6MuFdwuoShzc6T34rg0/uCVzQpl/yp9+jIuZQw==",
                             PhoneNumberConfirmed = false,
                             Plus = 1,
                             Reg_date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -199,21 +199,21 @@ namespace LitAnime.Migrations
                         new
                         {
                             Id = "1",
-                            ConcurrencyStamp = "1bc18948-9b54-4653-b744-e78b3439a67f",
+                            ConcurrencyStamp = "4a435226-4518-4491-b203-0ef90f48a8df",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "2",
-                            ConcurrencyStamp = "b8ff87f2-5dd7-49b5-952c-beb0ce98a01a",
+                            ConcurrencyStamp = "b60fe4a7-32ee-4ce0-815f-cb0f2f824454",
                             Name = "moderator",
                             NormalizedName = "MODERATOR"
                         },
                         new
                         {
                             Id = "3",
-                            ConcurrencyStamp = "73c3e994-8de6-4673-bb91-e503baa75ab2",
+                            ConcurrencyStamp = "c4368e33-559e-48f2-9e26-e56085d08124",
                             Name = "user",
                             NormalizedName = "USER"
                         });

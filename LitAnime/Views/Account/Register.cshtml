@@ -5,7 +5,7 @@
     <div>
         @{
             if (ViewBag.returnUrl == null)
-                ViewBag.returnUrl = "/Home/Index";
+                ViewBag.returnUrl = "/";
         }
         <form asp-area="" asp-controller="Account" asp-action="Register" method="post" asp-route-returnUrl="@ViewBag.returnUrl">
             <div class="block">

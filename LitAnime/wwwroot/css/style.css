@@ -186,6 +186,7 @@ body {
 }
 
 .login_form {
+    font-family: "MainFont";
     padding: 50px 35px 50px 50px;
     background: #ccc;
     position: absolute;
@@ -200,6 +201,7 @@ body {
 }
 
 .block {
+    font-family: "MainFontBold";
     margin: 25px 0 25px 0;
     padding: 0 0;
 }
@@ -245,3 +247,36 @@ ul.hr {
         display: inline-block; 
         padding: 0px; 
     }
+
+.upload_pic {
+    padding: 50px 35px 50px 50px;
+    background: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(75, 242, 226, 0.3);
+    min-width: 300px;
+    box-shadow: -18px 0 20px -20px #333, 18px 0 20px -20px #333;
+}
+
+.uploading_image{
+    width:180px;
+    height:180px;
+}
+
+.skeleton{
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200,20%,70%);
+    }
+
+    100% {
+        background-color: hsl(200,20%,85%);
+    }
+}

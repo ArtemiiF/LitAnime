@@ -6,13 +6,17 @@ namespace LitAnime.Domain
 {
     public class AppDbContext : IdentityDbContext<User>
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        { 
+            
+        }
         public DbSet<Picture> Pictures { get; set; } = null!;
         public DbSet<Pic_tag> Pic_Tags { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            
 
             builder.Entity<IdentityRole>().HasData(new IdentityRole
             {
@@ -66,7 +70,7 @@ namespace LitAnime.Domain
         public void UploadTags(string tags, string path)
         {
             Picture picture = this.Pictures.FirstOrDefault(p => p.Link == path);
-            if(picture != null)
+            if (picture != null)
             {
                 List<string> currTags = tags.ToLower().Replace(" ", "").Split(',').ToList();
 
@@ -78,6 +82,41 @@ namespace LitAnime.Domain
 
                 this.SaveChanges();
             }
+        }
+
+        public List<Picture> GetPicturesByTags(List<string> tags)
+        {
+
+            List<Picture> pictures = new List<Picture>();
+
+            if (Pictures.Count() == 0)
+            {
+                return pictures;
+            }
+
+
+            List<int> pic_id = new List<int>();
+
+            foreach (var item in tags)
+            {
+                var tempPic_Tags = (from pt in Pic_Tags
+                                    where pt.Tag == item
+                                    group pt by pt.Pic_id into picId
+                                    select picId.Key).ToList();
+
+                pic_id.AddRange(tempPic_Tags);
+            }
+
+            foreach (var item in pic_id)
+            {
+                var tempPictures = from p in Pictures
+                                   where p.Id == item
+                                   select p;
+
+                pictures.AddRange(tempPictures);
+            }
+
+            return pictures;
         }
     }
 }

@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Areas\User\" />
     <Folder Include="Areas\Moderator\" />
-    <Folder Include="Migrations\" />
     <Folder Include="wwwroot\img\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>

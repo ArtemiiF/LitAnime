@@ -5,7 +5,7 @@ namespace LitAnime.Models
     public class RegisterViewModel
     {
         [Required]
-        [Display(Name = "Логин")]
+        [Display(Name = "Login")]
         public string? UserName { get; set; }
 
         [Required]
@@ -14,7 +14,8 @@ namespace LitAnime.Models
 
         [Required]
         [UIHint("password")]
-        [Display(Name = "Пароль")]
+        [Display(Name = "Password")]
         public string? Password { get; set; }
+
     }
 }

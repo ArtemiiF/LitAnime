@@ -41,9 +41,7 @@ namespace LitAnime.Controllers
                     Microsoft.AspNetCore.Identity.SignInResult result = await signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false);
                     if(result.Succeeded)
                     {
-                        if (returnURL == null || returnURL == "")
-                            returnURL = "Home";
-                        return Redirect(returnURL ?? "/");
+                        return Redirect(returnURL ?? "Home");
                     }
                 }
                 ModelState.AddModelError(nameof(LoginViewModel.UserName), "Неверный логин или пароль");

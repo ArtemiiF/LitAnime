@@ -3,7 +3,7 @@ using LitAnime.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
-
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +16,6 @@ builder.Services.AddIdentity<User, IdentityRole>(opts =>
     opts.Password.RequireUppercase = false;
     opts.Password.RequireDigit = false;
 }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
-
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
 {
@@ -43,14 +42,18 @@ builder.Services.AddMvc(x =>
 
 builder.Configuration.Bind("Project", new Config());
 
-
 var app = builder.Build();
-
 
 if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 
 app.UseStaticFiles();
+app.UseFileServer(new FileServerOptions
+{
+    FileProvider = new PhysicalFileProvider(Config.ImagePath),
+    RequestPath = new PathString("/DBImage"),
+    EnableDirectoryBrowsing = false
+});
 
 app.UseRouting();
 
@@ -64,6 +67,7 @@ app.UseEndpoints(endpoints =>
         endpoints.MapControllerRoute(name: "moderator", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
         endpoints.MapControllerRoute(name: "user", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
         endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+        
     }
 );
 
